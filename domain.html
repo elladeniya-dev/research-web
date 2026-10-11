@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Domain | OutfitIQ R26-IT-052</title>
+  <meta name="description" content="Literature survey, research gap, research problem, objectives, methodology and technologies of the OutfitIQ fashion recommendation research project.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <nav class="container nav" aria-label="Main">
+      <a class="brand" href="index.html">
+        <span class="brand-mark" aria-hidden="true">iQ</span>
+        <span class="brand-text"><span class="brand-name">Outfit<em>IQ</em></span><span class="brand-id">R26-IT-052 · SLIIT</span></span>
+      </a>
+      <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="domain.html" aria-current="page">Domain</a></li>
+        <li><a href="milestones.html">Milestones</a></li>
+        <li><a href="documents.html">Documents</a></li>
+        <li><a href="presentations.html">Presentations</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="page-hero">
+      <div class="container">
+        <span class="eyebrow">Research domain</span>
+        <h1>Fashion recommendation that adapts, follows trends and completes the look</h1>
+        <p class="lead">The research context behind OutfitIQ: what earlier work achieved, where it stops, and how our four-engine system addresses the gap.</p>
+      </div>
+    </section>
+
+    <div class="container section">
+      <div class="domain-layout">
+        <nav class="toc" aria-label="On this page">
+          <ol>
+            <li><a href="#literature">Literature survey</a></li>
+            <li><a href="#gap">Research gap</a></li>
+            <li><a href="#problem">Research problem</a></li>
+            <li><a href="#objectives">Research objectives</a></li>
+            <li><a href="#methodology">Methodology</a></li>
+            <li><a href="#results">Results</a></li>
+            <li><a href="#technologies">Technologies used</a></li>
+          </ol>
+        </nav>
+
+        <div>
+          <!-- 1. Literature survey -->
+          <section class="domain-section" id="literature">
+            <h2><span class="idx">01</span>Literature survey</h2>
+            <p>Fashion recommendation has moved away from static profiles and towards systems that react to how users behave. Commercial platforms like Amazon Fashion, Zalando and ASOS offer filters, popularity rankings and collaborative filtering. These rely on generic user segments and rarely capture an individual's style or context.</p>
+
+            <h3>Dynamic user modelling</h3>
+            <p>Earlier studies show that personalisation improves when explicit preferences are combined with later user feedback [1], [2]. The timing of interactions also reveals how interests change [3]. These methods support dynamic profiles, but in fashion it matters <em>how</em> inferred behaviour affects what a user explicitly chose. A few weak clicks should not easily override a strongly stated preference.</p>
+
+            <h3>Semantic and visual representations</h3>
+            <p>Sentence-BERT introduced efficient sentence embeddings that can be compared with cosine similarity [4]. CLIP showed the value of shared image–text representations [5], and FashionCLIP adapted this to fashion concepts and product imagery [6]. Together they show that relationships beyond exact attribute matching can be captured. However, matching a product to a user's taste is a different task from deciding whether it works with other garments.</p>
+
+            <h3>Fashion trend forecasting</h3>
+            <p>Temporal models have been used to forecast fine-grained fashion trends from historical signals [7]. Inventory research shows that observed sales may under-represent demand when products go out of stock [8]. This motivates using retailer sell-out and restocking behaviour as an extra market signal, combined with recurrent models that capture short-term movement [9].</p>
+
+            <h3>Outfit compatibility</h3>
+            <p>Individually attractive garments do not automatically form a good outfit. Compatibility across multiple items has been learned with bidirectional LSTMs [10], and type-aware embeddings showed that compatibility depends on garment categories [11]. Recent Transformer models use self-attention to reason over complete outfits [12], [13]. Recommendation quality also depends on variety, not on repeating near-identical alternatives [14].</p>
+          </section>
+
+          <!-- 2. Research gap -->
+          <section class="domain-section" id="gap">
+            <h2><span class="idx">02</span>Research gap</h2>
+            <div class="callout">
+              <p><strong>Personalisation, semantic product understanding, trend forecasting and outfit compatibility have largely been studied as separate problems.</strong> No single adaptive framework combines dynamic user profiling, personalised clothing recommendation, live market trend analysis and outfit-level compatibility, while keeping each decision distinct.</p>
+            </div>
+            <p>The table compares OutfitIQ with the main families of existing approaches.</p>
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr><th>Approach</th><th>Adaptive user profile</th><th>Semantic product matching</th><th>Market trend signals</th><th>Whole-outfit compatibility</th><th>Integrated workflow</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>E-commerce platforms (filters, popularity, CF)</td><td>Partial</td><td>—</td><td>Popularity only</td><td>—</td><td>—</td></tr>
+                  <tr><td>Dynamic user-modelling studies [1]–[3]</td><td>✓</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
+                  <tr><td>Semantic / visual embedding models [4]–[6]</td><td>—</td><td>✓</td><td>—</td><td>Partial</td><td>—</td></tr>
+                  <tr><td>Trend forecasting studies [7]</td><td>—</td><td>—</td><td>✓</td><td>—</td><td>—</td></tr>
+                  <tr><td>Outfit compatibility models [10]–[13]</td><td>—</td><td>—</td><td>—</td><td>✓</td><td>—</td></tr>
+                  <tr><td><strong>OutfitIQ (proposed)</strong></td><td><strong>✓</strong></td><td><strong>✓</strong></td><td><strong>✓ MRTF + GRU</strong></td><td><strong>✓</strong></td><td><strong>✓</strong></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+
+          <!-- 3. Research problem -->
+          <section class="domain-section" id="problem">
+            <h2><span class="idx">03</span>Research problem</h2>
+            <p>Online shopping has made clothing easier to buy but not easier to choose. Users face many similar products across retailers, each described with different categories, styles and colours. Without in-store assistance, they browse excessively, make poor style choices or lack confidence in what they pick.</p>
+            <ul class="list-check">
+              <li><strong>Cold start and changing taste:</strong> new users have no interaction history, and existing users' interests shift over time.</li>
+              <li><strong>Inconsistent product data:</strong> exact attribute matching misses suitable products that retailers describe differently.</li>
+              <li><strong>Invisible market movement:</strong> users cannot see which styles, colours or categories are gaining interest in the local market.</li>
+              <li><strong>Item-level only:</strong> most systems recommend single products and do not help combine garments into a complete outfit.</li>
+            </ul>
+            <div class="callout">
+              <p><strong>Research question:</strong> How can user preference modelling, hybrid product recommendation, market-based trend analysis and outfit compatibility be combined in one adaptive system, so that online fashion discovery becomes more personalised, trend-aware and complete?</p>
+            </div>
+          </section>
+
+          <!-- 4. Objectives -->
+          <section class="domain-section" id="objectives">
+            <h2><span class="idx">04</span>Research objectives</h2>
+            <h3>Main objective</h3>
+            <p class="lead">To design, implement and evaluate an integrated fashion-assistance system that combines dynamic preference learning, hybrid product recommendation, market-based trend analysis and outfit compatibility modelling, supporting more personalised and complete online fashion discovery.</p>
+
+            <h3>Sub-objectives</h3>
+            <div class="grid grid-2">
+              <div class="card">
+                <span class="badge badge-accent">Engine 01</span>
+                <h3 style="margin-top:10px">Adaptive user modelling</h3>
+                <p>Build a user profile from explicit onboarding, update it continuously from interactions, and expand it in a controlled way with machine learning, without overriding stated preferences.</p>
+              </div>
+              <div class="card">
+                <span class="badge badge-accent">Engine 02</span>
+                <h3 style="margin-top:10px">Hybrid product recommendation</h3>
+                <p>Collect and normalise products from multiple retailers, then rank them by structured preference match, fashion-tuned semantic similarity and product-information quality.</p>
+              </div>
+              <div class="card">
+                <span class="badge badge-accent">Engine 03</span>
+                <h3 style="margin-top:10px">Market-oriented trend analysis</h3>
+                <p>Detect which fashion attributes are gaining market interest by combining retailer restock and turnover behaviour with GRU-based temporal forecasting.</p>
+              </div>
+              <div class="card">
+                <span class="badge badge-accent">Engine 04</span>
+                <h3 style="margin-top:10px">Whole-outfit compatibility</h3>
+                <p>Generate complete, occasion-aware outfits from a selected garment using explainable fashion rules together with a learned visual compatibility model.</p>
+              </div>
+            </div>
+            <p style="margin-top:20px" class="muted">Overall, the system also contributes an integrated workflow that connects all four capabilities through continued user interaction.</p>
+          </section>
+
+          <!-- 5. Methodology -->
+          <section class="domain-section" id="methodology">
+            <h2><span class="idx">05</span>Methodology</h2>
+            <p>OutfitIQ is built as four intelligent engines working across a shared workflow. The system first understands the user's preferences, then uses them to find suitable products from a normalised multi-retailer catalogue. In parallel it identifies emerging trends from market observations, and it can generate complete outfits from any selected product.</p>
+
+            <figure class="figure" style="margin:24px 0">
+              <a href="assets/img/architecture.png" target="_blank" rel="noopener">
+                <img src="assets/img/architecture.png" alt="OutfitIQ integrated system architecture and data flow between the four engines, the shared product database and the mobile app." width="1382" height="777" loading="lazy">
+              </a>
+              <figcaption>Fig. 1: Integrated system architecture and data flow</figcaption>
+            </figure>
+
+            <h3>A. User preference analysis &amp; dynamic modelling</h3>
+            <p>During onboarding, users state preferred categories, colours, styles, occasions, brands and priorities. This forms the initial profile and supports personalisation before any behaviour is available. The profile then updates from views, clicks, saves, selections and dislikes, weighted by interaction strength and recency (30-day half-life):</p>
+            <div class="formula">e<sub>i</sub> = w<sub>i</sub> · 2<sup>−a<sub>i</sub>/30</sup></div>
+            <p>Here w<sub>i</sub> is the interaction weight (view 1, click 2, save 3, select 4, dislike −2) and a<sub>i</sub> is the interaction's age in days. Learned weights L(a) are blended with onboarding choices O, and the onboarding influence λ(N) fades from 1.00 to 0.25 as interactions grow:</p>
+            <div class="formula">C(a) = λ(N) · I(a ∈ O) + L(a)</div>
+            <p>Scores below 0.30 are dropped and the top three per dimension are kept. A <strong>multi-label Logistic Regression</strong> model then predicts extra category, colour and style co-preferences using probability <em>uplift</em> over an empty-profile baseline. This produces the Final Enriched Preference Profile.</p>
+
+            <h3>B. Product data collection &amp; hybrid recommendation</h3>
+            <p>Products from multiple online retailers are validated, deduplicated and standardised into one catalogue, with availability checks. Ranking combines three signals:</p>
+            <ul class="list-check">
+              <li><strong>Structured preference match</strong> U(u,p): weighted across category 0.30, style 0.25, colour 0.20, brand 0.15 and price 0.10, normalised only over the dimensions the user has.</li>
+              <li><strong>Semantic similarity</strong> M(u,p): an all-MiniLM-L6-v2 SentenceTransformer fine-tuned on fashion triplets (anchor, positive, negative), with attribute-conflict checks.</li>
+              <li><strong>Product-information quality</strong> Q(p): image, retailer link, description, price and availability completeness.</li>
+            </ul>
+            <div class="formula">S<sub>P</sub>(u,p) = 0.60·U(u,p) + 0.25·M(u,p) + 0.15·Q(p)</div>
+            <p>A product is only recommended when it has a positive structured match or strong semantic similarity. Diversification stops one retailer or near-duplicate products from dominating the list.</p>
+
+            <h3>C. Trend analysis</h3>
+            <p>Daily product observations are collected from <strong>20 Sri Lankan fashion retailers</strong> using a four-stage extractor: Shopify JSON, JSON-LD, static HTML, then Gemini-assisted extraction. The data is cleaned and normalised separately from the recommendation catalogue.</p>
+            <ul class="list-check">
+              <li><strong>Market Restock–Turnover Factor (MRTF):</strong> a product that sells out and is restocked suggests demand, while stock that lingers at full price suggests low interest. MRTF is treated as a market indicator, not direct sales evidence.</li>
+              <li><strong>TrendNet:</strong> a GRU network that reads an attribute's last four share-of-assortment observations and predicts its direction of movement.</li>
+            </ul>
+            <div class="formula">S<sub>T</sub>(a,t) = 0.70·G(a,t) + 0.30·R(a,t)</div>
+            <p>G is the TrendNet prediction and R the MRTF score for attribute a at time t. The resulting trend snapshots link directly to catalogue products to surface trending items.</p>
+
+            <h3>D. Outfit compatibility &amp; generation</h3>
+            <p>When a user selects a garment, the mobile app sends the item, occasion and preferences to the outfit engine. The engine validates the item and works out the required structure: a top needs a bottom, a bottom needs a top, and a dress can stand alone. Outerwear, footwear or accessories get the core pieces added. Candidates are filtered by availability, category, price, colour and occasion, and pre-screened with pairwise checks.</p>
+            <div class="formula">R<sub>O</sub>(o) = 0.40·S(o) + 0.30·C(o) + 0.20·K(o) + 0.10·Q(o)</div>
+            <p>The rule-based score covers style S, colour C, category structure K and occasion Q. For visual compatibility, each product image becomes a cached 512-dimensional <strong>FashionCLIP</strong> embedding, and an <strong>Outfit Transformer</strong> scores all items together, M(o):</p>
+            <div class="formula">H(o) = 0.70·R<sub>O</sub>(o) + 0.30·M(o)</div>
+            <p>Outfits are ranked by H(o) and diversity-reranked, and returned with score breakdowns and reason tags so users can see <em>why</em> an outfit works.</p>
+          </section>
+
+          <!-- 6. Results -->
+          <section class="domain-section" id="results">
+            <h2><span class="idx">06</span>Results</h2>
+            <p>Each engine was evaluated on the task it is responsible for.</p>
+            <div class="table-wrap">
+              <table>
+                <thead><tr><th>Component</th><th>Metric</th><th>Result</th><th>Evaluation setting</th></tr></thead>
+                <tbody>
+                  <tr><td>Preference expansion</td><td>Average precision</td><td class="num">54.83%</td><td rowspan="3">431 test users (from 2,439); 7,317 training rows</td></tr>
+                  <tr><td>Preference expansion</td><td>Average recall</td><td class="num">11.92%</td></tr>
+                  <tr><td>Preference expansion</td><td>Hit rate</td><td class="num">91.96%</td></tr>
+                  <tr><td>Semantic ranking</td><td>Pretrained test accuracy</td><td class="num">71.60%</td><td rowspan="3">19,641 H&amp;M preference–purchase triplets, 80/10/10 split</td></tr>
+                  <tr><td>Semantic ranking</td><td>Fine-tuned test accuracy</td><td class="num">85.29%</td></tr>
+                  <tr><td>Semantic ranking</td><td>Validation accuracy</td><td class="num">85.18%</td></tr>
+                  <tr><td>TrendNet (H&amp;M)</td><td>Spearman IC</td><td class="num">0.4276</td><td>106 weeks, 80 attributes, 95 cutoffs (t = 16.51)</td></tr>
+                  <tr><td>TrendNet (H&amp;M)</td><td>Non-overlapping IC</td><td class="num">0.345</td><td>14 independent windows (t = 5.37)</td></tr>
+                  <tr><td>TrendNet + MRTF (Sri Lanka)</td><td>3-day IC / win rate</td><td class="num">0.237 / 80%</td><td>23 days, 56 attributes; 95% CI [0.107, 0.371]</td></tr>
+                  <tr><td>TrendNet + MRTF (Sri Lanka)</td><td>5-day IC / win rate</td><td class="num">0.227 / 75%</td><td>Beat all four baselines</td></tr>
+                  <tr><td>Outfit Transformer</td><td>Test accuracy</td><td class="num">66.2%</td><td rowspan="4">Polyvore Outfits (disjoint split)</td></tr>
+                  <tr><td>Outfit Transformer</td><td>F1-score</td><td class="num">0.673</td></tr>
+                  <tr><td>Outfit Transformer</td><td>Test ROC-AUC</td><td class="num">0.728</td></tr>
+                  <tr><td>Outfit Transformer</td><td>Best validation ROC-AUC</td><td class="num">0.751</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="muted">The Information Coefficient (IC) is a rank correlation, so 0.4276 is not the same as 42.76% accuracy. The combined TrendNet + MRTF engine outperformed random, current-share, recent-growth and restock-only baselines at both horizons.</p>
+          </section>
+
+          <!-- 7. Technologies -->
+          <section class="domain-section" id="technologies">
+            <h2><span class="idx">07</span>Technologies used</h2>
+            <div class="grid grid-2">
+              <div class="card tech-group">
+                <h3>Machine learning &amp; models</h3>
+                <div class="chips">
+                  <span class="chip">PyTorch</span><span class="chip">scikit-learn</span><span class="chip">Sentence-Transformers</span>
+                  <span class="chip">all-MiniLM-L6-v2</span><span class="chip">FashionCLIP</span><span class="chip">Outfit Transformer</span>
+                  <span class="chip">GRU (TrendNet)</span><span class="chip">Logistic Regression</span><span class="chip">pandas / NumPy</span>
+                </div>
+              </div>
+              <div class="card tech-group">
+                <h3>Data collection</h3>
+                <div class="chips">
+                  <span class="chip">Shopify JSON</span><span class="chip">JSON-LD</span><span class="chip">BeautifulSoup</span>
+                  <span class="chip">Google Gemini (assisted extraction)</span><span class="chip">Requests</span>
+                </div>
+              </div>
+              <div class="card tech-group">
+                <h3>Backend &amp; data</h3>
+                <div class="chips">
+                  <span class="chip">Python</span><span class="chip">FastAPI</span><span class="chip">Uvicorn</span>
+                  <span class="chip">PostgreSQL</span><span class="chip">SQLAlchemy</span><span class="chip">Pydantic</span><span class="chip">JWT auth</span>
+                </div>
+              </div>
+              <div class="card tech-group">
+                <h3>Mobile app</h3>
+                <div class="chips">
+                  <span class="chip">Flutter</span><span class="chip">Dart</span><span class="chip">Provider</span>
+                  <span class="chip">Google Sign-In</span><span class="chip">Secure storage</span>
+                </div>
+              </div>
+              <div class="card tech-group">
+                <h3>Datasets</h3>
+                <div class="chips">
+                  <span class="chip">H&amp;M Personalized Fashion Recommendations</span><span class="chip">HnM Search Data</span>
+                  <span class="chip">Polyvore Outfits</span><span class="chip">Street Fashion Style (SFS)</span><span class="chip">Live Sri Lankan retailer data</span>
+                </div>
+              </div>
+            </div>
+
+            <h3 style="margin-top:40px">References</h3>
+            <ol class="refs">
+              <li>S. Chakraborty et al., “Fashion Recommendation Systems, Models and Methods: A Review,” <em>Informatics</em>, vol. 8, no. 3, 2021.</li>
+              <li>W. Lei et al., “Estimation-Action-Reflection: Towards Deep Interaction Between Conversational and Recommender Systems,” in <em>Proc. ACM WSDM</em>, 2020.</li>
+              <li>J. Li, Y. Wang and J. McAuley, “Time Interval Aware Self-Attention for Sequential Recommendation,” in <em>Proc. ACM WSDM</em>, 2020.</li>
+              <li>N. Reimers and I. Gurevych, “Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks,” in <em>Proc. EMNLP-IJCNLP</em>, 2019.</li>
+              <li>A. Radford et al., “Learning Transferable Visual Models From Natural Language Supervision,” in <em>Proc. ICML</em>, 2021.</li>
+              <li>P. J. Chia et al., “Contrastive language and vision learning of general fashion concepts,” <em>Scientific Reports</em>, vol. 12, 2022.</li>
+              <li>Y. Ma et al., “Knowledge Enhanced Neural Fashion Trend Forecasting,” in <em>Proc. ACM ICMR</em>, 2020.</li>
+              <li>J. R. Trapero, E. H. de Frutos and D. J. Pedregal, “Demand forecasting under lost sales stock policies,” <em>Int. J. Forecasting</em>, vol. 40, no. 3, 2024.</li>
+              <li>K. Cho et al., “Learning Phrase Representations using RNN Encoder–Decoder for Statistical Machine Translation,” in <em>Proc. EMNLP</em>, 2014.</li>
+              <li>X. Han et al., “Learning Fashion Compatibility with Bidirectional LSTMs,” in <em>Proc. ACM Multimedia</em>, 2017.</li>
+              <li>M. I. Vasileva et al., “Learning Type-Aware Embeddings for Fashion Compatibility,” in <em>Proc. ECCV</em>, 2018.</li>
+              <li>R. Sarkar et al., “OutfitTransformer: Learning Outfit Representations for Fashion Recommendation,” in <em>Proc. IEEE/CVF WACV</em>, 2023.</li>
+              <li>S.-I. Papadopoulos et al., “VICTOR: Visual incompatibility detection with transformers and fashion-specific contrastive pre-training,” <em>J. Vis. Commun. Image Represent.</em>, vol. 90, 2023.</li>
+              <li>Y. Zhao et al., “Fairness and Diversity in Recommender Systems: A Survey,” <em>ACM Trans. Intell. Syst. Technol.</em>, vol. 16, no. 1, 2025.</li>
+            </ol>
+          </section>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div>© 2026 OutfitIQ · R26-IT-052 · Sri Lanka Institute of Information Technology</div>
+      <ul class="footer-links">
+        <li><a href="domain.html">Domain</a></li>
+        <li><a href="milestones.html">Milestones</a></li>
+        <li><a href="documents.html">Documents</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
