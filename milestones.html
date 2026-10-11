@@ -54,6 +54,9 @@
                 <option value="proposal" selected>Project Proposal</option>
                 <option value="pp1">Progress Presentation 1</option>
                 <option value="pp2">Progress Presentation 2</option>
+                <option value="research-paper">Research Paper</option>
+                <option value="draft-thesis">Draft Thesis</option>
+                <option value="website">Website</option>
                 <option value="final">Final Assessment</option>
                 <option value="viva">Viva</option>
               </select>
@@ -70,7 +73,7 @@
                 <p>The research topic, problem, existing work, proposed solution and per-member sub-objectives are submitted for panel approval. The panel judged the topic to have sufficient scope, novelty and feasibility for a final-year project.</p>
                 <dl class="ms-facts">
                   <div class="ms-fact"><dt>Date</dt><dd>January 2026</dd></div>
-                  <div class="ms-fact"><dt>Marks</dt><dd>Approval (no marks)</dd></div>
+                  <div class="ms-fact"><dt>Marks</dt><dd>Approved (no marks)</dd></div>
                   <div class="ms-fact"><dt>Type</dt><dd>Group</dd></div>
                 </dl>
                 <h3>Deliverables</h3>
@@ -89,7 +92,7 @@
                 <p>Each member presents the background, literature, research gap, objectives and planned methodology for their component, alongside the overall system design.</p>
                 <dl class="ms-facts">
                   <div class="ms-fact"><dt>Date</dt><dd>15 March 2026</dd></div>
-                  <div class="ms-fact"><dt>Marks</dt><dd>TBA</dd></div>
+                  <div class="ms-fact"><dt>Marks</dt><dd>Approved (no marks)</dd></div>
                   <div class="ms-fact"><dt>Type</dt><dd>Group + individual</dd></div>
                 </dl>
                 <h3>Deliverables</h3>
@@ -104,7 +107,7 @@
               <div class="card">
                 <div class="ms-head">
                   <h2 id="pp1-title">Progress Presentation 1</h2>
-                  <span class="badge badge-wait">Details pending</span>
+                  <span class="badge badge-ok">Completed</span>
                 </div>
                 <p>First progress review. Each member shows the completed portion of their component, early implementation and initial results against the proposal plan.</p>
                 <dl class="ms-facts">
@@ -123,7 +126,7 @@
               <div class="card">
                 <div class="ms-head">
                   <h2 id="pp2-title">Progress Presentation 2</h2>
-                  <span class="badge badge-wait">Details pending</span>
+                  <span class="badge badge-ok">Completed</span>
                 </div>
                 <p>Second progress review of a near-complete, integrated system, including model evaluation results for each engine.</p>
                 <dl class="ms-facts">
@@ -134,6 +137,63 @@
                 <h3>Deliverables</h3>
                 <ul class="list-check">
                   <li>Progress presentation and integrated system demonstration</li>
+                </ul>
+              </div>
+            </section>
+
+            <section class="milestone-panel" id="research-paper" aria-labelledby="research-paper-title">
+              <div class="card">
+                <div class="ms-head">
+                  <h2 id="research-paper-title">Research Paper</h2>
+                  <span class="badge badge-ok">Completed</span>
+                </div>
+                <p>Submission of the research paper documenting the problem, methodology, system design, experimental evaluation and findings.</p>
+                <dl class="ms-facts">
+                  <div class="ms-fact"><dt>Date</dt><dd>04 September 2026</dd></div>
+                  <div class="ms-fact"><dt>Marks</dt><dd>TBA</dd></div>
+                  <div class="ms-fact"><dt>Type</dt><dd>Group</dd></div>
+                </dl>
+                <h3>Deliverables</h3>
+                <ul class="list-check">
+                  <li>Research paper submission</li>
+                </ul>
+              </div>
+            </section>
+
+            <section class="milestone-panel" id="draft-thesis" aria-labelledby="draft-thesis-title">
+              <div class="card">
+                <div class="ms-head">
+                  <h2 id="draft-thesis-title">Draft Thesis</h2>
+                  <span class="badge badge-ok">Completed</span>
+                </div>
+                <p>Draft thesis with complete chapter structure, implementation details, evaluation outcomes and literature review.</p>
+                <dl class="ms-facts">
+                  <div class="ms-fact"><dt>Date</dt><dd>11 October 2026</dd></div>
+                  <div class="ms-fact"><dt>Marks</dt><dd>TBA</dd></div>
+                  <div class="ms-fact"><dt>Type</dt><dd>Group + individual</dd></div>
+                </dl>
+                <h3>Deliverables</h3>
+                <ul class="list-check">
+                  <li>Draft thesis document</li>
+                </ul>
+              </div>
+            </section>
+
+            <section class="milestone-panel" id="website" aria-labelledby="website-title">
+              <div class="card">
+                <div class="ms-head">
+                  <h2 id="website-title">Website</h2>
+                  <span class="badge badge-ok">Completed</span>
+                </div>
+                <p>Project website containing the research overview, domain, team, milestones, documents and contact information.</p>
+                <dl class="ms-facts">
+                  <div class="ms-fact"><dt>Date</dt><dd>11 October 2026</dd></div>
+                  <div class="ms-fact"><dt>Marks</dt><dd>TBA</dd></div>
+                  <div class="ms-fact"><dt>Type</dt><dd>Group</dd></div>
+                </dl>
+                <h3>Deliverables</h3>
+                <ul class="list-check">
+                  <li>Published project website</li>
                 </ul>
               </div>
             </section>
@@ -154,9 +214,6 @@
                 <ul class="list-check">
                   <li>Final presentation and system demonstration</li>
                   <li>Final group report and individual reports</li>
-                  <li>Research paper (04 September 2026)</li>
-                  <li>Draft thesis (11 October 2026)</li>
-                  <li>Project website (11 October 2026)</li>
                 </ul>
               </div>
             </section>
@@ -184,6 +241,9 @@
               <li class="done"><button type="button" data-milestone="proposal">Project Proposal</button><span class="when">15 Mar 2026</span></li>
               <li class="done"><button type="button" data-milestone="pp1">Progress Presentation 1</button><span class="when">10 Mar 2026</span></li>
               <li class="done"><button type="button" data-milestone="pp2">Progress Presentation 2</button><span class="when">30 Mar 2026</span></li>
+              <li class="done"><button type="button" data-milestone="research-paper">Research Paper</button><span class="when">04 Sep 2026</span></li>
+              <li class="done"><button type="button" data-milestone="draft-thesis">Draft Thesis</button><span class="when">11 Oct 2026</span></li>
+              <li class="done"><button type="button" data-milestone="website">Website</button><span class="when">11 Oct 2026</span></li>
               <li><button type="button" data-milestone="final">Final Assessment</button><span class="when">Future Improvements</span></li>
               <li><button type="button" data-milestone="viva">Viva</button><span class="when">TBA</span></li>
             </ol>
