@@ -360,12 +360,14 @@ td.num { font-variant-numeric: tabular-nums; font-weight: 600; white-space: nowr
 .member-role { font-size: .9rem; color: var(--accent-ink); font-weight: 600; margin-top: 8px; }
 .member-body a { font-size: .88rem; margin-top: auto; padding-top: 12px; word-break: break-all; }
 
-.supervisor { display: flex; gap: 16px; align-items: center; }
+.supervisor { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 16px; }
 .supervisor .avatar {
-  flex: none; width: 56px; height: 56px; border-radius: 50%; display: grid; place-items: center;
-  background: var(--ink); color: var(--paper); font-family: var(--serif); font-weight: 600; font-size: 1.1rem;
+  flex: none; width: 120px; height: 120px; border-radius: 50%; object-fit: cover;
+  border: 3px solid var(--card); box-shadow: 0 0 0 1px var(--line);
+  display: grid; place-items: center;
+  background: var(--ink); color: var(--paper); font-family: var(--serif); font-weight: 600; font-size: 1.6rem;
 }
-.supervisor h3 { font-size: 1.05rem; margin: 0; }
+.supervisor h3 { font-size: 1.05rem; margin: 0 0 4px; }
 .supervisor p { margin: 0; font-size: .88rem; color: var(--muted); }
 
 /* ---------- Contact ---------- */
