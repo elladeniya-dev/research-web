@@ -5,9 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Documents | OutfitIQ R26-IT-052</title>
   <meta name="description" content="Project documents for OutfitIQ (R26-IT-052): topic assessment, project charter, proposals, checklists, research paper and final reports.">
+  <meta name="theme-color" content="#131210">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23c2562c'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-style='italic' font-size='34' text-anchor='middle' fill='white'%3EiQ%3C/text%3E%3C/svg%3E">
+  <script>document.documentElement.classList.add("js");</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
@@ -20,7 +23,8 @@
         <span class="brand-text"><span class="brand-name">Outfit<em>IQ</em></span><span class="brand-id">R26-IT-052 · SLIIT</span></span>
       </a>
       <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        <svg class="icon-open" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        <svg class="icon-close" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
       </button>
       <ul class="nav-links" id="nav-links">
         <li><a href="index.html">Home</a></li>
@@ -29,14 +33,14 @@
         <li><a href="documents.html" aria-current="page">Documents</a></li>
         <li><a href="presentations.html">Presentations</a></li>
         <li><a href="about.html">About Us</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
+        <li><a class="nav-cta" href="contact.html">Contact Us</a></li>
       </ul>
     </nav>
   </header>
 
   <main id="main">
     <section class="page-hero">
-      <div class="container">
+      <div class="container reveal">
         <span class="eyebrow">Documents</span>
         <h1>Project documents</h1>
         <p class="lead">Everything the project has produced so far, plus the documents still to come. Each item opens in a new tab.</p>
@@ -46,102 +50,145 @@
     <section class="section">
       <div class="container">
         <!-- To publish a document: replace the <span class="btn" aria-disabled="true">…</span>
-             with <a class="btn btn-ghost" href="LINK" target="_blank" rel="noopener">View</a> -->
+             with <a class="btn btn-sm btn-ghost" href="LINK" target="_blank" rel="noopener">View</a> -->
 
-        <div class="group-title"><h2>Project</h2></div>
-        <div class="doc-list">
-          <article class="doc">
-            <span class="doc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6"/></svg></span>
-            <div><h3>Topic Assessment Form (TAF)</h3><p>Approved research topic, problem and sub-objectives</p></div>
-            <div class="doc-actions"><span class="badge badge-ok">Submitted</span><a class="btn btn-ghost" href="https://mysliit-my.sharepoint.com/:b:/g/personal/it22218476_my_sliit_lk/IQDwlaywM6kgR5LTjuCQfuE4AX2f8-utuosEwYL4PemWDCM?e=jc14Rc" target="_blank" rel="noopener">View</a></div>
-          </article>
-          <article class="doc">
-            <span class="doc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6"/><path d="M8 13h8M8 17h5"/></svg></span>
-            <div><h3>Research Paper</h3><p>A Multi-Engine Intelligent Fashion Recommendation System with Dynamic Preference Learning and Trend Awareness</p></div>
-            <div class="doc-actions"><span class="badge badge-ok">Completed</span><a class="btn btn-ghost" href="https://mysliit-my.sharepoint.com/:b:/g/personal/it22218476_my_sliit_lk/IQADYRApb5u1SKWXZLhC2FiuAcVpWNCs8OYYdYqP8p604Rw?e=FLsAWr" target="_blank" rel="noopener">View</a></div>
-          </article>
+        <nav class="doc-nav" aria-label="Document groups">
+          <a href="#project">Project <span>2</span></a>
+          <a href="#proposals">Proposal documents <span>4</span></a>
+          <a href="#checklists">Checklist documents <span>2</span></a>
+          <a href="#final">Final documents <span>5</span></a>
+        </nav>
+
+        <div class="doc-group" id="project">
+          <div class="group-title"><h2>Project</h2></div>
+          <div class="doc-list reveal-stagger">
+            <article class="doc">
+              <span class="doc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6"/></svg></span>
+              <div><h3>Topic Assessment Form (TAF)</h3><p>Approved research topic, problem and sub-objectives</p></div>
+              <div class="doc-actions"><span class="badge badge-ok">Submitted</span><a class="btn btn-sm btn-ghost" href="https://mysliit-my.sharepoint.com/:b:/g/personal/it22218476_my_sliit_lk/IQDwlaywM6kgR5LTjuCQfuE4AX2f8-utuosEwYL4PemWDCM?e=jc14Rc" target="_blank" rel="noopener">View <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a></div>
+            </article>
+            <article class="doc">
+              <span class="doc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6"/><path d="M8 13h8M8 17h5"/></svg></span>
+              <div><h3>Research Paper</h3><p>A Multi-Engine Intelligent Fashion Recommendation System with Dynamic Preference Learning and Trend Awareness</p></div>
+              <div class="doc-actions"><span class="badge badge-ok">Completed</span><a class="btn btn-sm btn-ghost" href="https://mysliit-my.sharepoint.com/:b:/g/personal/it22218476_my_sliit_lk/IQADYRApb5u1SKWXZLhC2FiuAcVpWNCs8OYYdYqP8p604Rw?e=FLsAWr" target="_blank" rel="noopener">View <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a></div>
+            </article>
+          </div>
         </div>
 
-        <div class="group-title"><h2>Proposal documents</h2><span class="muted">One per member</span></div>
-        <div class="doc-list">
-          <article class="doc">
-            <span class="doc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6"/></svg></span>
-            <div><h3>Proposal: User Preference Analysis &amp; Dynamic Modelling</h3><p>Ramanayake A.R.M.C.N.K · IT22247636</p></div>
-            <div class="doc-actions"><span class="badge badge-ok">Submitted</span><a class="btn btn-ghost" href="https://mysliit-my.sharepoint.com/:b:/g/personal/it22218476_my_sliit_lk/IQC7qPbjCJ6pR4nTgje95dRlAdeLKBI2FPq5WSpxZ8kGIYY?e=bpu462" target="_blank" rel="noopener">View</a></div>
-          </article>
-          <article class="doc">
-            <span class="doc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6"/></svg></span>
-            <div><h3>Proposal: Product Data Collection &amp; Hybrid Recommendation</h3><p>Gunathilake T.M.P.G.K.N · IT22189608</p></div>
-            <div class="doc-actions"><span class="badge badge-ok">Submitted</span><a class="btn btn-ghost" href="https://mysliit-my.sharepoint.com/:b:/g/personal/it22218476_my_sliit_lk/IQBEqOAcCLAIQ69UdP_RU5Z4AblbC2gCcfses3eLJQ_XUcY?e=qasTZa" target="_blank" rel="noopener">View</a></div>
-          </article>
-          <article class="doc">
-            <span class="doc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6"/></svg></span>
-            <div><h3>Proposal: Trend Analysis</h3><p>G.D.Elladeniya · IT22202840</p></div>
-            <div class="doc-actions"><span class="badge badge-ok">Submitted</span><a class="btn btn-ghost" href="https://mysliit-my.sharepoint.com/:b:/g/personal/it22218476_my_sliit_lk/IQC4mfI4zW8PQKGkD2xCTyQxAWT0kNZs79psAFF-2YZO6LA?e=R8lqQL" target="_blank" rel="noopener">View</a></div>
-          </article>
-          <article class="doc">
-            <span class="doc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6"/></svg></span>
-            <div><h3>Proposal: Outfit Compatibility &amp; Generation</h3><p>Rajapaksha P.D.S.S · IT22218476</p></div>
-            <div class="doc-actions"><span class="badge badge-ok">Submitted</span><a class="btn btn-ghost" href="https://mysliit-my.sharepoint.com/:b:/g/personal/it22218476_my_sliit_lk/IQB8F3fcgu_tQr8vddDCqHudARGhFaLWfW6wtR1BhaTaLXw?e=QouKKp" target="_blank" rel="noopener">View</a></div>
-          </article>
+        <div class="doc-group" id="proposals">
+          <div class="group-title"><h2>Proposal documents</h2><span class="muted">One per member</span></div>
+          <div class="doc-list reveal-stagger">
+            <article class="doc">
+              <span class="doc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6"/></svg></span>
+              <div><h3>Proposal: User Preference Analysis &amp; Dynamic Modelling</h3><p>Ramanayake A.R.M.C.N.K · IT22247636</p></div>
+              <div class="doc-actions"><span class="badge badge-ok">Submitted</span><a class="btn btn-sm btn-ghost" href="https://mysliit-my.sharepoint.com/:b:/g/personal/it22218476_my_sliit_lk/IQC7qPbjCJ6pR4nTgje95dRlAdeLKBI2FPq5WSpxZ8kGIYY?e=bpu462" target="_blank" rel="noopener">View <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a></div>
+            </article>
+            <article class="doc">
+              <span class="doc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6"/></svg></span>
+              <div><h3>Proposal: Product Data Collection &amp; Hybrid Recommendation</h3><p>Gunathilake T.M.P.G.K.N · IT22189608</p></div>
+              <div class="doc-actions"><span class="badge badge-ok">Submitted</span><a class="btn btn-sm btn-ghost" href="https://mysliit-my.sharepoint.com/:b:/g/personal/it22218476_my_sliit_lk/IQBEqOAcCLAIQ69UdP_RU5Z4AblbC2gCcfses3eLJQ_XUcY?e=qasTZa" target="_blank" rel="noopener">View <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a></div>
+            </article>
+            <article class="doc">
+              <span class="doc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6"/></svg></span>
+              <div><h3>Proposal: Trend Analysis</h3><p>G.D.Elladeniya · IT22202840</p></div>
+              <div class="doc-actions"><span class="badge badge-ok">Submitted</span><a class="btn btn-sm btn-ghost" href="https://mysliit-my.sharepoint.com/:b:/g/personal/it22218476_my_sliit_lk/IQC4mfI4zW8PQKGkD2xCTyQxAWT0kNZs79psAFF-2YZO6LA?e=R8lqQL" target="_blank" rel="noopener">View <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a></div>
+            </article>
+            <article class="doc">
+              <span class="doc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><path d="M14 3v6h6"/></svg></span>
+              <div><h3>Proposal: Outfit Compatibility &amp; Generation</h3><p>Rajapaksha P.D.S.S · IT22218476</p></div>
+              <div class="doc-actions"><span class="badge badge-ok">Submitted</span><a class="btn btn-sm btn-ghost" href="https://mysliit-my.sharepoint.com/:b:/g/personal/it22218476_my_sliit_lk/IQB8F3fcgu_tQr8vddDCqHudARGhFaLWfW6wtR1BhaTaLXw?e=QouKKp" target="_blank" rel="noopener">View <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a></div>
+            </article>
+          </div>
         </div>
 
-        <div class="group-title"><h2>Checklist documents</h2></div>
-        <div class="doc-list">
-          <article class="doc">
-            <span class="doc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6h11M9 12h11M9 18h11"/><path d="M4 6l1 1 2-2M4 12l1 1 2-2M4 18l1 1 2-2"/></svg></span>
-            <div><h3>Checklist 1</h3><p>MD File</p></div>
-            <div class="doc-actions"><span class="badge badge-ok">Submitted</span><a class="btn btn-ghost" href="https://mysliit.sharepoint.com/:t:/s/CDAPSubmissionCloud/IQD9KWq4OX6URpvQtpDao5B7Aas6H82wPvHuDJnFtQEDBzY?e=HkZmbR" target="_blank" rel="noopener">View</a></div>
-          </article>
-          <article class="doc">
-            <span class="doc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6h11M9 12h11M9 18h11"/><path d="M4 6l1 1 2-2M4 12l1 1 2-2M4 18l1 1 2-2"/></svg></span>
-            <div><h3>Checklist 2</h3><p>Project Planner</p></div>
-            <div class="doc-actions"><span class="badge badge-ok">Submitted</span><a class="btn btn-ghost" href="https://mysliit.sharepoint.com/:x:/s/CDAPSubmissionCloud/IQCp7vzX5mQBQ6BVqI6f3HPfAQaLU_f7DNuPxKSKPpXxnXc?e=Zi4n8I" target="_blank" rel="noopener">View</a></div>
-          </article>
+        <div class="doc-group" id="checklists">
+          <div class="group-title"><h2>Checklist documents</h2></div>
+          <div class="doc-list reveal-stagger">
+            <article class="doc">
+              <span class="doc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6h11M9 12h11M9 18h11"/><path d="M4 6l1 1 2-2M4 12l1 1 2-2M4 18l1 1 2-2"/></svg></span>
+              <div><h3>Checklist 1</h3><p>MD File</p></div>
+              <div class="doc-actions"><span class="badge badge-ok">Submitted</span><a class="btn btn-sm btn-ghost" href="https://mysliit.sharepoint.com/:t:/s/CDAPSubmissionCloud/IQD9KWq4OX6URpvQtpDao5B7Aas6H82wPvHuDJnFtQEDBzY?e=HkZmbR" target="_blank" rel="noopener">View <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a></div>
+            </article>
+            <article class="doc">
+              <span class="doc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6h11M9 12h11M9 18h11"/><path d="M4 6l1 1 2-2M4 12l1 1 2-2M4 18l1 1 2-2"/></svg></span>
+              <div><h3>Checklist 2</h3><p>Project Planner</p></div>
+              <div class="doc-actions"><span class="badge badge-ok">Submitted</span><a class="btn btn-sm btn-ghost" href="https://mysliit.sharepoint.com/:x:/s/CDAPSubmissionCloud/IQCp7vzX5mQBQ6BVqI6f3HPfAQaLU_f7DNuPxKSKPpXxnXc?e=Zi4n8I" target="_blank" rel="noopener">View <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a></div>
+            </article>
+          </div>
         </div>
 
-        <div class="group-title"><h2>Final documents</h2><span class="muted">Group report + four individual reports</span></div>
-        <div class="doc-list">
-          <article class="doc">
-            <span class="doc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19V5a2 2 0 0 1 2-2h12v18H6a2 2 0 0 1-2-2z"/><path d="M4 17h14"/></svg></span>
-            <div><h3>Final Report: Group</h3><p>Complete OutfitIQ system</p></div>
-            <div class="doc-actions"><span class="badge badge-accent">Draft</span><a class="btn btn-ghost" href="https://mysliit.sharepoint.com/:b:/s/CDAPSubmissionCloud/IQCsDUFNy_O5TqITPZximzaJAVZWnntLYaxIupmTSIQJpkw?e=zVJcqw" target="_blank" rel="noopener">View draft</a></div>
-          </article>
-          <article class="doc">
-            <span class="doc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19V5a2 2 0 0 1 2-2h12v18H6a2 2 0 0 1-2-2z"/><path d="M4 17h14"/></svg></span>
-            <div><h3>Final Report: User Preference Analysis &amp; Dynamic Modelling</h3><p>Ramanayake A.R.M.C.N.K · IT22247636</p></div>
-            <div class="doc-actions"><span class="badge badge-accent">Draft</span><a class="btn btn-ghost" href="https://mysliit.sharepoint.com/:b:/s/CDAPSubmissionCloud/IQD5VbKGfyQDTqQo7hbCvOToAZq-bGNo2b0g43DOGoDhwtk?e=lPkivk" target="_blank" rel="noopener">View draft</a></div>
-          </article>
-          <article class="doc">
-            <span class="doc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19V5a2 2 0 0 1 2-2h12v18H6a2 2 0 0 1-2-2z"/><path d="M4 17h14"/></svg></span>
-            <div><h3>Final Report: Product Data Collection &amp; Hybrid Recommendation</h3><p>Gunathilake T.M.P.G.K.N · IT22189608</p></div>
-            <div class="doc-actions"><span class="badge badge-accent">Draft</span><a class="btn btn-ghost" href="https://mysliit.sharepoint.com/:b:/s/CDAPSubmissionCloud/IQDpVjti2CesRZl69_vuyI3GAQ2A3MmHSe4pBdGGX1pWeac?e=m6beLw" target="_blank" rel="noopener">View draft</a></div>
-          </article>
-          <article class="doc">
-            <span class="doc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19V5a2 2 0 0 1 2-2h12v18H6a2 2 0 0 1-2-2z"/><path d="M4 17h14"/></svg></span>
-            <div><h3>Final Report: Trend Analysis</h3><p>G.D.Elladeniya · IT22202840</p></div>
-            <div class="doc-actions"><span class="badge badge-accent">Draft</span><a class="btn btn-ghost" href="https://mysliit.sharepoint.com/:b:/s/CDAPSubmissionCloud/IQD2MtyOpatqSJfoiomhB-C_AQ0g2HTnV1lHef3VV8sfMUg?e=c3tAFu" target="_blank" rel="noopener">View draft</a></div>
-          </article>
-          <article class="doc">
-            <span class="doc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19V5a2 2 0 0 1 2-2h12v18H6a2 2 0 0 1-2-2z"/><path d="M4 17h14"/></svg></span>
-            <div><h3>Final Report: Outfit Compatibility &amp; Generation</h3><p>Rajapaksha P.D.S.S · IT22218476</p></div>
-            <div class="doc-actions"><span class="badge badge-accent">Draft</span><a class="btn btn-ghost" href="https://mysliit.sharepoint.com/:b:/s/CDAPSubmissionCloud/IQArxeS2bdklSapVH4W3zkPnAcYhLWyz-GfF6px9lggwcyc?e=U2daIa" target="_blank" rel="noopener">View draft</a></div>
-          </article>
+        <div class="doc-group" id="final">
+          <div class="group-title"><h2>Final documents</h2><span class="muted">Group report + four individual reports</span></div>
+          <div class="doc-list reveal-stagger">
+            <article class="doc">
+              <span class="doc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19V5a2 2 0 0 1 2-2h12v18H6a2 2 0 0 1-2-2z"/><path d="M4 17h14"/></svg></span>
+              <div><h3>Final Report: Group</h3><p>Complete OutfitIQ system</p></div>
+              <div class="doc-actions"><span class="badge badge-accent">Draft</span><a class="btn btn-sm btn-ghost" href="https://mysliit.sharepoint.com/:b:/s/CDAPSubmissionCloud/IQCsDUFNy_O5TqITPZximzaJAVZWnntLYaxIupmTSIQJpkw?e=zVJcqw" target="_blank" rel="noopener">View draft <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a></div>
+            </article>
+            <article class="doc">
+              <span class="doc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19V5a2 2 0 0 1 2-2h12v18H6a2 2 0 0 1-2-2z"/><path d="M4 17h14"/></svg></span>
+              <div><h3>Final Report: User Preference Analysis &amp; Dynamic Modelling</h3><p>Ramanayake A.R.M.C.N.K · IT22247636</p></div>
+              <div class="doc-actions"><span class="badge badge-accent">Draft</span><a class="btn btn-sm btn-ghost" href="https://mysliit.sharepoint.com/:b:/s/CDAPSubmissionCloud/IQD5VbKGfyQDTqQo7hbCvOToAZq-bGNo2b0g43DOGoDhwtk?e=lPkivk" target="_blank" rel="noopener">View draft <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a></div>
+            </article>
+            <article class="doc">
+              <span class="doc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19V5a2 2 0 0 1 2-2h12v18H6a2 2 0 0 1-2-2z"/><path d="M4 17h14"/></svg></span>
+              <div><h3>Final Report: Product Data Collection &amp; Hybrid Recommendation</h3><p>Gunathilake T.M.P.G.K.N · IT22189608</p></div>
+              <div class="doc-actions"><span class="badge badge-accent">Draft</span><a class="btn btn-sm btn-ghost" href="https://mysliit.sharepoint.com/:b:/s/CDAPSubmissionCloud/IQDpVjti2CesRZl69_vuyI3GAQ2A3MmHSe4pBdGGX1pWeac?e=m6beLw" target="_blank" rel="noopener">View draft <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a></div>
+            </article>
+            <article class="doc">
+              <span class="doc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19V5a2 2 0 0 1 2-2h12v18H6a2 2 0 0 1-2-2z"/><path d="M4 17h14"/></svg></span>
+              <div><h3>Final Report: Trend Analysis</h3><p>G.D.Elladeniya · IT22202840</p></div>
+              <div class="doc-actions"><span class="badge badge-accent">Draft</span><a class="btn btn-sm btn-ghost" href="https://mysliit.sharepoint.com/:b:/s/CDAPSubmissionCloud/IQD2MtyOpatqSJfoiomhB-C_AQ0g2HTnV1lHef3VV8sfMUg?e=c3tAFu" target="_blank" rel="noopener">View draft <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a></div>
+            </article>
+            <article class="doc">
+              <span class="doc-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19V5a2 2 0 0 1 2-2h12v18H6a2 2 0 0 1-2-2z"/><path d="M4 17h14"/></svg></span>
+              <div><h3>Final Report: Outfit Compatibility &amp; Generation</h3><p>Rajapaksha P.D.S.S · IT22218476</p></div>
+              <div class="doc-actions"><span class="badge badge-accent">Draft</span><a class="btn btn-sm btn-ghost" href="https://mysliit.sharepoint.com/:b:/s/CDAPSubmissionCloud/IQArxeS2bdklSapVH4W3zkPnAcYhLWyz-GfF6px9lggwcyc?e=U2daIa" target="_blank" rel="noopener">View draft <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a></div>
+            </article>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container footer-grid">
-      <div>© 2026 OutfitIQ · R26-IT-052 · Sri Lanka Institute of Information Technology</div>
-      <ul class="footer-links">
-        <li><a href="domain.html">Domain</a></li>
-        <li><a href="milestones.html">Milestones</a></li>
-        <li><a href="documents.html">Documents</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
-      </ul>
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a class="brand" href="index.html">
+            <span class="brand-mark" aria-hidden="true">iQ</span>
+            <span class="brand-text"><span class="brand-name">Outfit<em>IQ</em></span><span class="brand-id">R26-IT-052 · SLIIT</span></span>
+          </a>
+          <p>A multi-engine intelligent fashion recommendation system with dynamic preference learning and trend awareness.</p>
+          <span class="footer-tag">IT4010 Research Project 2026 · Centre of Excellence for AI</span>
+        </div>
+        <div>
+          <p class="footer-h">Explore</p>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="domain.html">Domain</a></li>
+            <li><a href="milestones.html">Milestones</a></li>
+            <li><a href="documents.html">Documents</a></li>
+            <li><a href="presentations.html">Presentations</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-h">Contact</p>
+          <ul class="footer-contact">
+            <li><a href="mailto:outfitiq@gmail.com">outfitiq@gmail.com</a></li>
+            <li>+94 78 297 3353</li>
+            <li>Kaldemulla Moratuwa</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>© 2026 OutfitIQ · R26-IT-052 · Sri Lanka Institute of Information Technology</div>
+        <a class="to-top" href="#main">Back to top
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg>
+        </a>
+      </div>
     </div>
   </footer>
 

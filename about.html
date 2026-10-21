@@ -5,9 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>About Us | OutfitIQ R26-IT-052</title>
   <meta name="description" content="The OutfitIQ research team (R26-IT-052) and supervisors at the Sri Lanka Institute of Information Technology.">
+  <meta name="theme-color" content="#131210">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23c2562c'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-style='italic' font-size='34' text-anchor='middle' fill='white'%3EiQ%3C/text%3E%3C/svg%3E">
+  <script>document.documentElement.classList.add("js");</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
@@ -20,7 +23,8 @@
         <span class="brand-text"><span class="brand-name">Outfit<em>IQ</em></span><span class="brand-id">R26-IT-052 · SLIIT</span></span>
       </a>
       <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        <svg class="icon-open" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        <svg class="icon-close" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
       </button>
       <ul class="nav-links" id="nav-links">
         <li><a href="index.html">Home</a></li>
@@ -29,61 +33,71 @@
         <li><a href="documents.html">Documents</a></li>
         <li><a href="presentations.html">Presentations</a></li>
         <li><a href="about.html" aria-current="page">About Us</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
+        <li><a class="nav-cta" href="contact.html">Contact Us</a></li>
       </ul>
     </nav>
   </header>
 
   <main id="main">
     <section class="page-hero">
-      <div class="container">
+      <div class="container reveal">
         <span class="eyebrow">About us</span>
-        <h1>The team behind OutfitIQ</h1>
+        <h1>The team behind Outfit<em>IQ</em></h1>
         <p class="lead">Final-year undergraduates of the Faculty of Computing, Sri Lanka Institute of Information Technology, specialising in Information Technology. The project belongs to the Centre of Excellence for AI (CoEAI) research group.</p>
+        <dl class="facts">
+          <div><dt>Institution</dt><dd>Sri Lanka Institute of Information Technology</dd></div>
+          <div><dt>Faculty</dt><dd>Faculty of Computing</dd></div>
+          <div><dt>Specialisation</dt><dd>Information Technology</dd></div>
+          <div><dt>Research group</dt><dd>Centre of Excellence for AI (CoEAI)</dd></div>
+        </dl>
       </div>
     </section>
 
     <section class="section">
       <div class="container">
-        <span class="eyebrow">Research group · R26-IT-052</span>
-        <h2 style="margin-bottom:28px">Group members</h2>
-        <div class="grid grid-4">
+        <div class="section-head reveal">
+          <div>
+            <span class="eyebrow">Research group · R26-IT-052</span>
+            <h2>Group members</h2>
+          </div>
+        </div>
+        <div class="grid grid-4 reveal-stagger">
           <!-- To add a photo: put it in assets/img/team/ and replace the member-initials span with
                <img src="assets/img/team/FILE.jpg" alt="Photo of NAME" width="600" height="600" loading="lazy"> -->
           <article class="card member">
             <div class="member-photo"><img src="assets/img/team/it22247636.jpeg" alt="Photo of Ramanayake A.R.M.C.N.K" width="600" height="600" loading="lazy"></div>
             <div class="member-body">
-              <h3>Ramanayake A.R.M.C.N.K</h3>
               <span class="member-id">IT22247636</span>
+              <h3>Ramanayake A.R.M.C.N.K</h3>
               <span class="member-role">User Preference Analysis &amp; Dynamic Modelling</span>
-              <a href="mailto:it22247636@my.sliit.lk">it22247636@my.sliit.lk</a>
+              <a class="member-mail" href="mailto:it22247636@my.sliit.lk"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>it22247636@my.sliit.lk</a>
             </div>
           </article>
           <article class="card member">
             <div class="member-photo"><img src="assets/img/team/it22189608.jpg" alt="Photo of Gunathilake T.M.P.G.K.N" width="600" height="600" loading="lazy"></div>
             <div class="member-body">
-              <h3>Gunathilake T.M.P.G.K.N</h3>
               <span class="member-id">IT22189608</span>
+              <h3>Gunathilake T.M.P.G.K.N</h3>
               <span class="member-role">Product Data Collection &amp; Hybrid Recommendation</span>
-              <a href="mailto:it22189608@my.sliit.lk">it22189608@my.sliit.lk</a>
+              <a class="member-mail" href="mailto:it22189608@my.sliit.lk"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>it22189608@my.sliit.lk</a>
             </div>
           </article>
           <article class="card member">
             <div class="member-photo"><img src="assets/img/team/it22202840.jpg" alt="Photo of G.D.Elladeniya" width="600" height="600" loading="lazy"></div>
             <div class="member-body">
-              <h3>G.D.Elladeniya</h3>
               <span class="member-id">IT22202840</span>
+              <h3>G.D.Elladeniya</h3>
               <span class="member-role">Trend Analysis</span>
-              <a href="mailto:it22202840@my.sliit.lk">it22202840@my.sliit.lk</a>
+              <a class="member-mail" href="mailto:it22202840@my.sliit.lk"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>it22202840@my.sliit.lk</a>
             </div>
           </article>
           <article class="card member">
             <div class="member-photo"><img src="assets/img/team/it22218476.jpg" alt="Photo of Rajapaksha P.D.S.S" width="600" height="600" loading="lazy"></div>
             <div class="member-body">
-              <h3>Rajapaksha P.D.S.S</h3>
               <span class="member-id">IT22218476</span>
+              <h3>Rajapaksha P.D.S.S</h3>
               <span class="member-role">Outfit Compatibility &amp; Generation</span>
-              <a href="mailto:it22218476@my.sliit.lk">it22218476@my.sliit.lk</a>
+              <a class="member-mail" href="mailto:it22218476@my.sliit.lk"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>it22218476@my.sliit.lk</a>
             </div>
           </article>
         </div>
@@ -92,20 +106,24 @@
 
     <section class="section section-alt">
       <div class="container">
-        <span class="eyebrow">Guidance</span>
-        <h2 style="margin-bottom:28px">Supervisors</h2>
-        <div class="grid grid-3">
+        <div class="section-head reveal">
+          <div>
+            <span class="eyebrow">Guidance</span>
+            <h2>Supervisors</h2>
+          </div>
+        </div>
+        <div class="grid grid-3 reveal-stagger">
           <div class="card supervisor">
             <img class="avatar" src="assets/img/supervisors/dushanthi-kuruppu.jpg" alt="Photo of Ms. Dushanthi Kuruppu" width="320" height="320" loading="lazy">
-            <div><h3>Ms. Dushanthi Kuruppu</h3><p>Supervisor · SLIIT</p></div>
+            <div><span class="sup-role">Supervisor</span><h3>Ms. Dushanthi Kuruppu</h3><p>SLIIT</p></div>
           </div>
           <div class="card supervisor">
             <img class="avatar" src="assets/img/supervisors/kavinga-abeywardena.jpg" alt="Photo of Mr. Kavinga Yapa Abeywardena" width="320" height="320" loading="lazy">
-            <div><h3>Mr. Kavinga Yapa Abeywardena</h3><p>Co-supervisor · SLIIT</p></div>
+            <div><span class="sup-role">Co-supervisor</span><h3>Mr. Kavinga Yapa Abeywardena</h3><p>SLIIT</p></div>
           </div>
           <div class="card supervisor">
             <img class="avatar" src="assets/img/supervisors/naleen-karunarathne.jpg" alt="Photo of Mr. Naleen Karunarathne" width="320" height="320" loading="lazy">
-            <div><h3>Mr. Naleen Karunarathne</h3><p>External supervisor · Technical Manager, Kelly Felder · 15 years in the fashion industry</p></div>
+            <div><span class="sup-role">External supervisor</span><h3>Mr. Naleen Karunarathne</h3><p>Technical Manager, Kelly Felder · 15 years in the fashion industry</p></div>
           </div>
         </div>
       </div>
@@ -113,15 +131,43 @@
   </main>
 
   <footer class="site-footer">
-    <div class="container footer-grid">
-      <div>© 2026 OutfitIQ · R26-IT-052 · Sri Lanka Institute of Information Technology</div>
-      <ul class="footer-links">
-        <li><a href="domain.html">Domain</a></li>
-        <li><a href="milestones.html">Milestones</a></li>
-        <li><a href="documents.html">Documents</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
-      </ul>
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a class="brand" href="index.html">
+            <span class="brand-mark" aria-hidden="true">iQ</span>
+            <span class="brand-text"><span class="brand-name">Outfit<em>IQ</em></span><span class="brand-id">R26-IT-052 · SLIIT</span></span>
+          </a>
+          <p>A multi-engine intelligent fashion recommendation system with dynamic preference learning and trend awareness.</p>
+          <span class="footer-tag">IT4010 Research Project 2026 · Centre of Excellence for AI</span>
+        </div>
+        <div>
+          <p class="footer-h">Explore</p>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="domain.html">Domain</a></li>
+            <li><a href="milestones.html">Milestones</a></li>
+            <li><a href="documents.html">Documents</a></li>
+            <li><a href="presentations.html">Presentations</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-h">Contact</p>
+          <ul class="footer-contact">
+            <li><a href="mailto:outfitiq@gmail.com">outfitiq@gmail.com</a></li>
+            <li>+94 78 297 3353</li>
+            <li>Kaldemulla Moratuwa</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>© 2026 OutfitIQ · R26-IT-052 · Sri Lanka Institute of Information Technology</div>
+        <a class="to-top" href="#main">Back to top
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg>
+        </a>
+      </div>
     </div>
   </footer>
 

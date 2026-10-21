@@ -5,9 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>OutfitIQ | R26-IT-052</title>
   <meta name="description" content="OutfitIQ: a multi-engine intelligent fashion recommendation system with dynamic preference learning and trend awareness. SLIIT research project R26-IT-052.">
+  <meta name="theme-color" content="#131210">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23c2562c'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-style='italic' font-size='34' text-anchor='middle' fill='white'%3EiQ%3C/text%3E%3C/svg%3E">
+  <script>document.documentElement.classList.add("js");</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
@@ -20,7 +23,8 @@
         <span class="brand-text"><span class="brand-name">Outfit<em>IQ</em></span><span class="brand-id">R26-IT-052 · SLIIT</span></span>
       </a>
       <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        <svg class="icon-open" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        <svg class="icon-close" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
       </button>
       <ul class="nav-links" id="nav-links">
         <li><a href="index.html" aria-current="page">Home</a></li>
@@ -29,7 +33,7 @@
         <li><a href="documents.html">Documents</a></li>
         <li><a href="presentations.html">Presentations</a></li>
         <li><a href="about.html">About Us</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
+        <li><a class="nav-cta" href="contact.html">Contact Us</a></li>
       </ul>
     </nav>
   </header>
@@ -37,49 +41,60 @@
   <main id="main">
     <section class="hero">
       <div class="container hero-grid">
-        <div>
-          <span class="eyebrow">IT4010 Research Project 2026 · Smart Fashion Assistant: An Intelligent Personalized and Trend-Aware Fashion 
-Recommendation System</span>
+        <div class="reveal">
+          <span class="hero-kicker"><span class="dot" aria-hidden="true"></span>IT4010 Research Project 2026</span>
+          <p class="hero-title-full">Smart Fashion Assistant: An Intelligent Personalized and Trend-Aware Fashion Recommendation System</p>
           <h1>Outfit<em>IQ</em></h1>
           <p class="hero-sub">A multi-engine intelligent fashion recommendation system with dynamic preference learning and trend awareness.</p>
           <p class="lead">Online fashion has no shortage of clothes. The hard part is choosing. OutfitIQ learns what each user likes, follows what the Sri Lankan market is moving towards, and turns a single garment into a complete, compatible outfit, all in one mobile app.</p>
           <div class="hero-actions">
-            <a class="btn" href="domain.html">Explore the research
+            <a class="btn btn-accent" href="domain.html">Explore the research
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
             </a>
-            <a class="btn btn-ghost" href="about.html">Meet the team</a>
+            <a class="btn btn-outline-light" href="about.html">Meet the team</a>
           </div>
           <div class="hero-meta">
-            <span class="badge badge-accent">Centre of Excellence for AI</span>
-            <span class="badge badge-accent">Information Technology</span>
-            <span class="badge badge-accent">Mobile application</span>
+            <span class="badge">Centre of Excellence for AI</span>
+            <span class="badge">Information Technology</span>
+            <span class="badge">Mobile application</span>
           </div>
         </div>
 
-        <div class="engine-stack" aria-label="The four intelligent engines">
-          <div class="engine-pill">
-            <span class="engine-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg></span>
-            <div><strong>User Preference Learning</strong><span>Onboarding + interactions + ML expansion</span></div>
-          </div>
-          <div class="engine-pill">
-            <span class="engine-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h18l-7 9v6l-4 2v-8z"/></svg></span>
-            <div><strong>Hybrid Recommendation</strong><span>Structured match + semantic ranking</span></div>
-          </div>
-          <div class="engine-pill">
-            <span class="engine-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg></span>
-            <div><strong>Trend Analysis</strong><span>MRTF + GRU forecasting</span></div>
-          </div>
-          <div class="engine-pill">
-            <span class="engine-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 6a2 2 0 1 1 3 1.7c-.6.4-1 .9-1 1.6V10l8.6 6.2A1.5 1.5 0 0 1 19.7 19H4.3a1.5 1.5 0 0 1-.9-2.8L12 10"/></svg></span>
-            <div><strong>Outfit Generation</strong><span>Rules + Transformer compatibility</span></div>
+        <div class="hero-panel reveal" aria-label="The four intelligent engines">
+          <div class="hero-panel-head"><span>The four intelligent engines</span><span class="live">R26-IT-052</span></div>
+          <ol class="engine-flow">
+            <li class="engine-row">
+              <span class="engine-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg></span>
+              <div><strong>User Preference Learning</strong><span class="sub">Onboarding + interactions + ML expansion</span></div>
+              <span class="engine-no">01</span>
+            </li>
+            <li class="engine-row">
+              <span class="engine-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h18l-7 9v6l-4 2v-8z"/></svg></span>
+              <div><strong>Hybrid Recommendation</strong><span class="sub">Structured match + semantic ranking</span></div>
+              <span class="engine-no">02</span>
+            </li>
+            <li class="engine-row">
+              <span class="engine-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg></span>
+              <div><strong>Trend Analysis</strong><span class="sub">MRTF + GRU forecasting</span></div>
+              <span class="engine-no">03</span>
+            </li>
+            <li class="engine-row">
+              <span class="engine-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 6a2 2 0 1 1 3 1.7c-.6.4-1 .9-1 1.6V10l8.6 6.2A1.5 1.5 0 0 1 19.7 19H4.3a1.5 1.5 0 0 1-.9-2.8L12 10"/></svg></span>
+              <div><strong>Outfit Generation</strong><span class="sub">Rules + Transformer compatibility</span></div>
+              <span class="engine-no">04</span>
+            </li>
+          </ol>
+          <div class="hero-panel-foot">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M11 18h2"/></svg>
+            <span>Recommendations, outfits and trend insights in one mobile app</span>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section-tight">
+    <section class="stats-band">
       <div class="container">
-        <div class="stats">
+        <div class="stats reveal">
           <div class="stat"><div class="stat-value">85.29%</div><div class="stat-label">Semantic ranking accuracy after fashion fine-tuning (up from 71.60%)</div></div>
           <div class="stat"><div class="stat-value">0.4276</div><div class="stat-label">Trend forecast Information Coefficient across 95 temporal cutoffs</div></div>
           <div class="stat"><div class="stat-value">0.728</div><div class="stat-label">Outfit compatibility ROC-AUC on the Polyvore test set</div></div>
@@ -89,51 +104,70 @@ Recommendation System</span>
     </section>
 
     <section class="section">
-      <div class="container grid grid-2" style="gap:48px;align-items:start">
+      <div class="container split reveal">
         <div>
           <span class="eyebrow">The problem</span>
-          <h2>Choosing clothes online is still hard</h2>
+          <h2>Choosing clothes online is still <em>hard</em></h2>
           <p>The same kind of garment shows up across many retailers, each described with different categories, styles and colours. A user's taste changes over time, new users have no history at all, and a product that matches someone's taste may not work with the rest of their outfit.</p>
           <p class="muted">Existing work treats personalisation, trend forecasting and outfit compatibility as separate problems.</p>
         </div>
         <div>
           <span class="eyebrow">Our approach</span>
-          <h2>Four engines, one workflow</h2>
+          <h2>Four engines, <em>one</em> workflow</h2>
           <p>OutfitIQ keeps four kinds of intelligence separate, then connects them. It asks what <em>this user</em> is likely to prefer, which products match that taste, which fashion attributes are <em>gaining market interest</em>, and which garments <em>work together</em> as a complete look.</p>
-          <a href="domain.html#methodology">Read the methodology →</a>
+          <a class="text-link" href="domain.html#methodology">Read the methodology
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+          </a>
         </div>
       </div>
     </section>
 
     <section class="section section-alt">
       <div class="container">
-        <span class="eyebrow">System components</span>
-        <h2>The intelligent engines</h2>
-        <p class="lead" style="margin-bottom:32px">Each engine is owned by one member of the research team.</p>
-        <div class="grid grid-4">
+        <div class="section-head reveal">
+          <div>
+            <span class="eyebrow">System components</span>
+            <h2>The intelligent engines</h2>
+            <p class="lead">Each engine is owned by one member of the research team.</p>
+          </div>
+          <a class="btn btn-ghost" href="about.html">Meet the team</a>
+        </div>
+        <div class="grid grid-4 reveal-stagger">
           <article class="card engine-card">
-            <span class="num">01</span>
+            <div class="engine-card-top">
+              <span class="engine-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg></span>
+              <span class="num">01</span>
+            </div>
             <h3>User Preference Analysis &amp; Dynamic Modelling</h3>
             <p>Builds a profile from onboarding, updates it from views, saves, selections and dislikes, and expands it with a multi-label Logistic Regression model.</p>
-            <div class="owner">Ramanayake A.R.M.C.N.K</div>
+            <div class="owner"><img src="assets/img/team/it22247636.jpeg" alt="" width="32" height="32" loading="lazy">Ramanayake A.R.M.C.N.K</div>
           </article>
           <article class="card engine-card">
-            <span class="num">02</span>
+            <div class="engine-card-top">
+              <span class="engine-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 4h18l-7 9v6l-4 2v-8z"/></svg></span>
+              <span class="num">02</span>
+            </div>
             <h3>Product Data Collection &amp; Hybrid Recommendation</h3>
             <p>Normalises a multi-retailer catalogue and ranks products with structured matching, a fine-tuned SentenceTransformer, and a product-quality score.</p>
-            <div class="owner">Gunathilake T.M.P.G.K.N</div>
+            <div class="owner"><img src="assets/img/team/it22189608.jpg" alt="" width="32" height="32" loading="lazy">Gunathilake T.M.P.G.K.N</div>
           </article>
           <article class="card engine-card">
-            <span class="num">03</span>
+            <div class="engine-card-top">
+              <span class="engine-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg></span>
+              <span class="num">03</span>
+            </div>
             <h3>Trend Analysis</h3>
             <p>Combines the Market Restock–Turnover Factor (MRTF) with a GRU-based TrendNet to score which fashion attributes are rising in the market.</p>
-            <div class="owner">G.D.Elladeniya</div>
+            <div class="owner"><img src="assets/img/team/it22202840.jpg" alt="" width="32" height="32" loading="lazy">G.D.Elladeniya</div>
           </article>
           <article class="card engine-card">
-            <span class="num">04</span>
+            <div class="engine-card-top">
+              <span class="engine-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 6a2 2 0 1 1 3 1.7c-.6.4-1 .9-1 1.6V10l8.6 6.2A1.5 1.5 0 0 1 19.7 19H4.3a1.5 1.5 0 0 1-.9-2.8L12 10"/></svg></span>
+              <span class="num">04</span>
+            </div>
             <h3>Outfit Compatibility &amp; Generation</h3>
             <p>Completes an outfit from one selected garment using interpretable fashion rules and an Outfit Transformer over cached FashionCLIP embeddings.</p>
-            <div class="owner">Rajapaksha P.D.S.S</div>
+            <div class="owner"><img src="assets/img/team/it22218476.jpg" alt="" width="32" height="32" loading="lazy">Rajapaksha P.D.S.S</div>
           </article>
         </div>
       </div>
@@ -141,49 +175,95 @@ Recommendation System</span>
 
     <section class="section">
       <div class="container">
-        <span class="eyebrow">Architecture</span>
-        <h2>How the system fits together</h2>
-        <p class="lead" style="margin-bottom:28px">User signals, retailer catalogues and market observations flow through the four engines into recommendations, outfits and trend insights in the mobile app.</p>
-        <figure class="figure">
+        <div class="section-head reveal">
+          <div>
+            <span class="eyebrow">Architecture</span>
+            <h2>How the system fits together</h2>
+            <p class="lead">User signals, retailer catalogues and market observations flow through the four engines into recommendations, outfits and trend insights in the mobile app.</p>
+          </div>
+        </div>
+        <figure class="figure reveal">
           <a href="assets/img/architecture.png" target="_blank" rel="noopener">
             <img src="assets/img/architecture.png" alt="OutfitIQ architecture: user onboarding and interactions feed User Preference Learning; this feeds Hybrid Recommendation, which reads the Shared Product Database built from retail crawling and normalisation. Trend Analysis uses market observations and trend snapshots. Outfit Generation uses FashionCLIP embeddings and the selected garment. Top-N recommendations, top-N outfits and trending insights reach the mobile app." width="1382" height="777" loading="lazy">
           </a>
-          <figcaption>Integrated system architecture and data flow (click to enlarge)</figcaption>
+          <figcaption>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/></svg>
+            Integrated system architecture and data flow (click to enlarge)
+          </figcaption>
         </figure>
       </div>
     </section>
 
-    <section class="section-tight">
-      <div class="container grid grid-3">
-        <a class="card" href="milestones.html" style="text-decoration:none;color:inherit">
-          <span class="eyebrow">Milestones</span>
-          <h3>Assessments &amp; timeline</h3>
-          <p class="muted">Dates, marks and deliverables for each project assessment.</p>
-        </a>
-        <a class="card" href="documents.html" style="text-decoration:none;color:inherit">
-          <span class="eyebrow">Documents</span>
-          <h3>Reports &amp; papers</h3>
-          <p class="muted">TAF, proposals, checklists, the research paper and final reports.</p>
-        </a>
-        <a class="card" href="presentations.html" style="text-decoration:none;color:inherit">
-          <span class="eyebrow">Presentations</span>
-          <h3>Slides</h3>
-          <p class="muted">Slide decks from the proposal and progress presentations.</p>
-        </a>
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-head reveal">
+          <div>
+            <span class="eyebrow">Project resources</span>
+            <h2>Follow the research</h2>
+          </div>
+        </div>
+        <div class="grid grid-3 reveal-stagger">
+          <a class="card link-card" href="milestones.html">
+            <span class="eyebrow">Milestones</span>
+            <h3>Assessments &amp; timeline</h3>
+            <p class="muted">Dates, marks and deliverables for each project assessment.</p>
+            <span class="arrow" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </a>
+          <a class="card link-card" href="documents.html">
+            <span class="eyebrow">Documents</span>
+            <h3>Reports &amp; papers</h3>
+            <p class="muted">TAF, proposals, checklists, the research paper and final reports.</p>
+            <span class="arrow" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </a>
+          <a class="card link-card" href="presentations.html">
+            <span class="eyebrow">Presentations</span>
+            <h3>Slides</h3>
+            <p class="muted">Slide decks from the proposal and progress presentations.</p>
+            <span class="arrow" aria-hidden="true"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </a>
+        </div>
       </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container footer-grid">
-      <div>© 2026 OutfitIQ · R26-IT-052 · Sri Lanka Institute of Information Technology</div>
-      <ul class="footer-links">
-        <li><a href="domain.html">Domain</a></li>
-        <li><a href="milestones.html">Milestones</a></li>
-        <li><a href="documents.html">Documents</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
-      </ul>
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a class="brand" href="index.html">
+            <span class="brand-mark" aria-hidden="true">iQ</span>
+            <span class="brand-text"><span class="brand-name">Outfit<em>IQ</em></span><span class="brand-id">R26-IT-052 · SLIIT</span></span>
+          </a>
+          <p>A multi-engine intelligent fashion recommendation system with dynamic preference learning and trend awareness.</p>
+          <span class="footer-tag">IT4010 Research Project 2026 · Centre of Excellence for AI</span>
+        </div>
+        <div>
+          <p class="footer-h">Explore</p>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="domain.html">Domain</a></li>
+            <li><a href="milestones.html">Milestones</a></li>
+            <li><a href="documents.html">Documents</a></li>
+            <li><a href="presentations.html">Presentations</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-h">Contact</p>
+          <ul class="footer-contact">
+            <li><a href="mailto:outfitiq@gmail.com">outfitiq@gmail.com</a></li>
+            <li>+94 78 297 3353</li>
+            <li>Kaldemulla Moratuwa</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>© 2026 OutfitIQ · R26-IT-052 · Sri Lanka Institute of Information Technology</div>
+        <a class="to-top" href="#main">Back to top
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg>
+        </a>
+      </div>
     </div>
   </footer>
 

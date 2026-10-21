@@ -5,9 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Domain | OutfitIQ R26-IT-052</title>
   <meta name="description" content="Literature survey, research gap, research problem, objectives, methodology and technologies of the OutfitIQ fashion recommendation research project.">
+  <meta name="theme-color" content="#131210">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23c2562c'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-style='italic' font-size='34' text-anchor='middle' fill='white'%3EiQ%3C/text%3E%3C/svg%3E">
+  <script>document.documentElement.classList.add("js");</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
@@ -20,7 +23,8 @@
         <span class="brand-text"><span class="brand-name">Outfit<em>IQ</em></span><span class="brand-id">R26-IT-052 · SLIIT</span></span>
       </a>
       <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        <svg class="icon-open" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        <svg class="icon-close" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
       </button>
       <ul class="nav-links" id="nav-links">
         <li><a href="index.html">Home</a></li>
@@ -29,31 +33,37 @@
         <li><a href="documents.html">Documents</a></li>
         <li><a href="presentations.html">Presentations</a></li>
         <li><a href="about.html">About Us</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
+        <li><a class="nav-cta" href="contact.html">Contact Us</a></li>
       </ul>
     </nav>
   </header>
 
   <main id="main">
     <section class="page-hero">
-      <div class="container">
+      <div class="container reveal">
         <span class="eyebrow">Research domain</span>
-        <h1>Fashion recommendation that adapts, follows trends and completes the look</h1>
+        <h1>Fashion recommendation that adapts, follows trends and <em>completes the look</em></h1>
         <p class="lead">The research context behind OutfitIQ: what earlier work achieved, where it stops, and how our four-engine system addresses the gap.</p>
+        <div class="page-hero-meta">
+          <span><b>07</b> sections</span>
+          <span><b>04</b> intelligent engines</span>
+          <span><b>14</b> references</span>
+        </div>
       </div>
     </section>
 
     <div class="container section">
       <div class="domain-layout">
         <nav class="toc" aria-label="On this page">
+          <p class="toc-title">On this page</p>
           <ol>
-            <li><a href="#literature">Literature survey</a></li>
-            <li><a href="#gap">Research gap</a></li>
-            <li><a href="#problem">Research problem</a></li>
-            <li><a href="#objectives">Research objectives</a></li>
-            <li><a href="#methodology">Methodology</a></li>
-            <li><a href="#results">Results</a></li>
-            <li><a href="#technologies">Technologies used</a></li>
+            <li><a href="#literature"><span>01</span>Literature survey</a></li>
+            <li><a href="#gap"><span>02</span>Research gap</a></li>
+            <li><a href="#problem"><span>03</span>Research problem</a></li>
+            <li><a href="#objectives"><span>04</span>Research objectives</a></li>
+            <li><a href="#methodology"><span>05</span>Methodology</a></li>
+            <li><a href="#results"><span>06</span>Results</a></li>
+            <li><a href="#technologies"><span>07</span>Technologies used</a></li>
           </ol>
         </nav>
 
@@ -84,17 +94,17 @@
             </div>
             <p>The table compares OutfitIQ with the main families of existing approaches.</p>
             <div class="table-wrap">
-              <table>
+              <table class="gap-table">
                 <thead>
                   <tr><th>Approach</th><th>Adaptive user profile</th><th>Semantic product matching</th><th>Market trend signals</th><th>Whole-outfit compatibility</th><th>Integrated workflow</th></tr>
                 </thead>
                 <tbody>
-                  <tr><td>E-commerce platforms (filters, popularity, CF)</td><td>Partial</td><td>—</td><td>Popularity only</td><td>—</td><td>—</td></tr>
-                  <tr><td>Dynamic user-modelling studies [1]–[3]</td><td>✓</td><td>—</td><td>—</td><td>—</td><td>—</td></tr>
-                  <tr><td>Semantic / visual embedding models [4]–[6]</td><td>—</td><td>✓</td><td>—</td><td>Partial</td><td>—</td></tr>
-                  <tr><td>Trend forecasting studies [7]</td><td>—</td><td>—</td><td>✓</td><td>—</td><td>—</td></tr>
-                  <tr><td>Outfit compatibility models [10]–[13]</td><td>—</td><td>—</td><td>—</td><td>✓</td><td>—</td></tr>
-                  <tr><td><strong>OutfitIQ (proposed)</strong></td><td><strong>✓</strong></td><td><strong>✓</strong></td><td><strong>✓ MRTF + GRU</strong></td><td><strong>✓</strong></td><td><strong>✓</strong></td></tr>
+                  <tr><td>E-commerce platforms (filters, popularity, CF)</td><td><span class="part">Partial</span></td><td><span class="no">—</span></td><td><span class="part">Popularity only</span></td><td><span class="no">—</span></td><td><span class="no">—</span></td></tr>
+                  <tr><td>Dynamic user-modelling studies [1]–[3]</td><td><span class="yes">✓</span></td><td><span class="no">—</span></td><td><span class="no">—</span></td><td><span class="no">—</span></td><td><span class="no">—</span></td></tr>
+                  <tr><td>Semantic / visual embedding models [4]–[6]</td><td><span class="no">—</span></td><td><span class="yes">✓</span></td><td><span class="no">—</span></td><td><span class="part">Partial</span></td><td><span class="no">—</span></td></tr>
+                  <tr><td>Trend forecasting studies [7]</td><td><span class="no">—</span></td><td><span class="no">—</span></td><td><span class="yes">✓</span></td><td><span class="no">—</span></td><td><span class="no">—</span></td></tr>
+                  <tr><td>Outfit compatibility models [10]–[13]</td><td><span class="no">—</span></td><td><span class="no">—</span></td><td><span class="no">—</span></td><td><span class="yes">✓</span></td><td><span class="no">—</span></td></tr>
+                  <tr class="highlight"><td><strong>OutfitIQ (proposed)</strong></td><td><span class="yes">✓</span></td><td><span class="yes">✓</span></td><td><span class="yes yes-wide">✓ MRTF + GRU</span></td><td><span class="yes">✓</span></td><td><span class="yes">✓</span></td></tr>
                 </tbody>
               </table>
             </div>
@@ -110,8 +120,8 @@
               <li><strong>Invisible market movement:</strong> users cannot see which styles, colours or categories are gaining interest in the local market.</li>
               <li><strong>Item-level only:</strong> most systems recommend single products and do not help combine garments into a complete outfit.</li>
             </ul>
-            <div class="callout">
-              <p><strong>Research question:</strong> How can user preference modelling, hybrid product recommendation, market-based trend analysis and outfit compatibility be combined in one adaptive system, so that online fashion discovery becomes more personalised, trend-aware and complete?</p>
+            <div class="callout callout-quote">
+              <p><strong>Research question</strong> How can user preference modelling, hybrid product recommendation, market-based trend analysis and outfit compatibility be combined in one adaptive system, so that online fashion discovery becomes more personalised, trend-aware and complete?</p>
             </div>
           </section>
 
@@ -123,28 +133,28 @@
 
             <h3>Sub-objectives</h3>
             <div class="grid grid-2">
-              <div class="card">
-                <span class="badge badge-accent">Engine 01</span>
-                <h3 style="margin-top:10px">Adaptive user modelling</h3>
+              <div class="card objective-card">
+                <span class="badge badge-accent badge-plain">Engine 01</span>
+                <h3>Adaptive user modelling</h3>
                 <p>Build a user profile from explicit onboarding, update it continuously from interactions, and expand it in a controlled way with machine learning, without overriding stated preferences.</p>
               </div>
-              <div class="card">
-                <span class="badge badge-accent">Engine 02</span>
-                <h3 style="margin-top:10px">Hybrid product recommendation</h3>
+              <div class="card objective-card">
+                <span class="badge badge-accent badge-plain">Engine 02</span>
+                <h3>Hybrid product recommendation</h3>
                 <p>Collect and normalise products from multiple retailers, then rank them by structured preference match, fashion-tuned semantic similarity and product-information quality.</p>
               </div>
-              <div class="card">
-                <span class="badge badge-accent">Engine 03</span>
-                <h3 style="margin-top:10px">Market-oriented trend analysis</h3>
+              <div class="card objective-card">
+                <span class="badge badge-accent badge-plain">Engine 03</span>
+                <h3>Market-oriented trend analysis</h3>
                 <p>Detect which fashion attributes are gaining market interest by combining retailer restock and turnover behaviour with GRU-based temporal forecasting.</p>
               </div>
-              <div class="card">
-                <span class="badge badge-accent">Engine 04</span>
-                <h3 style="margin-top:10px">Whole-outfit compatibility</h3>
+              <div class="card objective-card">
+                <span class="badge badge-accent badge-plain">Engine 04</span>
+                <h3>Whole-outfit compatibility</h3>
                 <p>Generate complete, occasion-aware outfits from a selected garment using explainable fashion rules together with a learned visual compatibility model.</p>
               </div>
             </div>
-            <p style="margin-top:20px" class="muted">Overall, the system also contributes an integrated workflow that connects all four capabilities through continued user interaction.</p>
+            <p style="margin-top:24px" class="muted">Overall, the system also contributes an integrated workflow that connects all four capabilities through continued user interaction.</p>
           </section>
 
           <!-- 5. Methodology -->
@@ -152,7 +162,7 @@
             <h2><span class="idx">05</span>Methodology</h2>
             <p>OutfitIQ is built as four intelligent engines working across a shared workflow. The system first understands the user's preferences, then uses them to find suitable products from a normalised multi-retailer catalogue. In parallel it identifies emerging trends from market observations, and it can generate complete outfits from any selected product.</p>
 
-            <figure class="figure" style="margin:24px 0">
+            <figure class="figure" style="margin:28px 0">
               <a href="assets/img/architecture.png" target="_blank" rel="noopener">
                 <img src="assets/img/architecture.png" alt="OutfitIQ integrated system architecture and data flow between the four engines, the shared product database and the mobile app." width="1382" height="777" loading="lazy">
               </a>
@@ -226,7 +236,10 @@
             <h2><span class="idx">07</span>Technologies used</h2>
             <div class="grid grid-2">
               <div class="card tech-group">
-                <h3>Machine learning &amp; models</h3>
+                <div class="tech-group-head">
+                  <span class="engine-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><circle cx="4" cy="6" r="2"/><circle cx="20" cy="6" r="2"/><circle cx="4" cy="18" r="2"/><circle cx="20" cy="18" r="2"/><path d="M6 7l3.5 3M18 7l-3.5 3M6 17l3.5-3M18 17l-3.5-3"/></svg></span>
+                  <h3>Machine learning &amp; models</h3>
+                </div>
                 <div class="chips">
                   <span class="chip">PyTorch</span><span class="chip">scikit-learn</span><span class="chip">Sentence-Transformers</span>
                   <span class="chip">all-MiniLM-L6-v2</span><span class="chip">FashionCLIP</span><span class="chip">Outfit Transformer</span>
@@ -234,28 +247,40 @@
                 </div>
               </div>
               <div class="card tech-group">
-                <h3>Data collection</h3>
+                <div class="tech-group-head">
+                  <span class="engine-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg></span>
+                  <h3>Data collection</h3>
+                </div>
                 <div class="chips">
                   <span class="chip">Shopify JSON</span><span class="chip">JSON-LD</span><span class="chip">BeautifulSoup</span>
                   <span class="chip">Google Gemini (assisted extraction)</span><span class="chip">Requests</span>
                 </div>
               </div>
               <div class="card tech-group">
-                <h3>Backend &amp; data</h3>
+                <div class="tech-group-head">
+                  <span class="engine-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="7" rx="2"/><rect x="3" y="13" width="18" height="7" rx="2"/><path d="M7 7.5h.01M7 16.5h.01"/></svg></span>
+                  <h3>Backend &amp; data</h3>
+                </div>
                 <div class="chips">
                   <span class="chip">Python</span><span class="chip">FastAPI</span><span class="chip">Uvicorn</span>
                   <span class="chip">PostgreSQL</span><span class="chip">SQLAlchemy</span><span class="chip">Pydantic</span><span class="chip">JWT auth</span>
                 </div>
               </div>
               <div class="card tech-group">
-                <h3>Mobile app</h3>
+                <div class="tech-group-head">
+                  <span class="engine-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="2" width="12" height="20" rx="2.5"/><path d="M11 18h2"/></svg></span>
+                  <h3>Mobile app</h3>
+                </div>
                 <div class="chips">
                   <span class="chip">Flutter</span><span class="chip">Dart</span><span class="chip">Provider</span>
                   <span class="chip">Google Sign-In</span><span class="chip">Secure storage</span>
                 </div>
               </div>
-              <div class="card tech-group">
-                <h3>Datasets</h3>
+              <div class="card tech-group span-2">
+                <div class="tech-group-head">
+                  <span class="engine-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v14c0 1.7 3.6 3 8 3s8-1.3 8-3V5M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/></svg></span>
+                  <h3>Datasets</h3>
+                </div>
                 <div class="chips">
                   <span class="chip">H&amp;M Personalized Fashion Recommendations</span><span class="chip">HnM Search Data</span>
                   <span class="chip">Polyvore Outfits</span><span class="chip">Street Fashion Style (SFS)</span><span class="chip">Live Sri Lankan retailer data</span>
@@ -263,7 +288,7 @@
               </div>
             </div>
 
-            <h3 style="margin-top:40px">References</h3>
+            <h3 class="refs-title">References</h3>
             <ol class="refs">
               <li>S. Chakraborty et al., “Fashion Recommendation Systems, Models and Methods: A Review,” <em>Informatics</em>, vol. 8, no. 3, 2021.</li>
               <li>W. Lei et al., “Estimation-Action-Reflection: Towards Deep Interaction Between Conversational and Recommender Systems,” in <em>Proc. ACM WSDM</em>, 2020.</li>
@@ -287,15 +312,43 @@
   </main>
 
   <footer class="site-footer">
-    <div class="container footer-grid">
-      <div>© 2026 OutfitIQ · R26-IT-052 · Sri Lanka Institute of Information Technology</div>
-      <ul class="footer-links">
-        <li><a href="domain.html">Domain</a></li>
-        <li><a href="milestones.html">Milestones</a></li>
-        <li><a href="documents.html">Documents</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
-      </ul>
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a class="brand" href="index.html">
+            <span class="brand-mark" aria-hidden="true">iQ</span>
+            <span class="brand-text"><span class="brand-name">Outfit<em>IQ</em></span><span class="brand-id">R26-IT-052 · SLIIT</span></span>
+          </a>
+          <p>A multi-engine intelligent fashion recommendation system with dynamic preference learning and trend awareness.</p>
+          <span class="footer-tag">IT4010 Research Project 2026 · Centre of Excellence for AI</span>
+        </div>
+        <div>
+          <p class="footer-h">Explore</p>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="domain.html">Domain</a></li>
+            <li><a href="milestones.html">Milestones</a></li>
+            <li><a href="documents.html">Documents</a></li>
+            <li><a href="presentations.html">Presentations</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-h">Contact</p>
+          <ul class="footer-contact">
+            <li><a href="mailto:outfitiq@gmail.com">outfitiq@gmail.com</a></li>
+            <li>+94 78 297 3353</li>
+            <li>Kaldemulla Moratuwa</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>© 2026 OutfitIQ · R26-IT-052 · Sri Lanka Institute of Information Technology</div>
+        <a class="to-top" href="#main">Back to top
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg>
+        </a>
+      </div>
     </div>
   </footer>
 

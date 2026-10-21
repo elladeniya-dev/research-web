@@ -5,9 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Milestones | OutfitIQ R26-IT-052</title>
   <meta name="description" content="Project assessments for OutfitIQ (R26-IT-052): topic assessment, proposal, progress presentations, final assessment and viva.">
+  <meta name="theme-color" content="#131210">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23c2562c'/%3E%3Ctext x='32' y='44' font-family='Georgia,serif' font-style='italic' font-size='34' text-anchor='middle' fill='white'%3EiQ%3C/text%3E%3C/svg%3E">
+  <script>document.documentElement.classList.add("js");</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,600;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
@@ -20,7 +23,8 @@
         <span class="brand-text"><span class="brand-name">Outfit<em>IQ</em></span><span class="brand-id">R26-IT-052 · SLIIT</span></span>
       </a>
       <button class="nav-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        <svg class="icon-open" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+        <svg class="icon-close" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg>
       </button>
       <ul class="nav-links" id="nav-links">
         <li><a href="index.html">Home</a></li>
@@ -29,17 +33,21 @@
         <li><a href="documents.html">Documents</a></li>
         <li><a href="presentations.html">Presentations</a></li>
         <li><a href="about.html">About Us</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
+        <li><a class="nav-cta" href="contact.html">Contact Us</a></li>
       </ul>
     </nav>
   </header>
 
   <main id="main">
     <section class="page-hero">
-      <div class="container">
+      <div class="container reveal">
         <span class="eyebrow">Milestones</span>
         <h1>Project assessments</h1>
         <p class="lead">Every assessment in the IT4010 research project, with its date, marks and deliverables. Choose one from the menu to see the details.</p>
+        <div class="ms-progress" aria-label="Assessment progress">
+          <div class="ms-progress-top"><span>Progress</span><span><b id="ms-count">7 of 9</b> completed</span></div>
+          <div class="ms-bar"><span id="ms-bar" style="width:78%"></span></div>
+        </div>
       </div>
     </section>
 
@@ -234,18 +242,18 @@
             </section>
           </div>
 
-          <aside aria-label="Timeline">
-            <h2 style="font-size:1.3rem">Timeline</h2>
+          <aside class="card timeline-card" aria-label="Timeline">
+            <h2>Timeline</h2>
             <ol class="timeline">
-              <li class="done"><button type="button" data-milestone="taf">Topic Assessment</button><span class="when">January 2026</span></li>
-              <li class="done"><button type="button" data-milestone="proposal">Project Proposal</button><span class="when">17 Mar 2026</span></li>
-              <li class="done"><button type="button" data-milestone="pp1">Progress Presentation 1</button><span class="when">12 May 2026</span></li>
-              <li class="done"><button type="button" data-milestone="pp2">Progress Presentation 2</button><span class="when">01 Sep 2026</span></li>
-              <li class="done"><button type="button" data-milestone="research-paper">Research Paper</button><span class="when">04 Sep 2026</span></li>
-              <li class="done"><button type="button" data-milestone="draft-thesis">Draft Thesis</button><span class="when">11 Oct 2026</span></li>
-              <li class="done"><button type="button" data-milestone="website">Website</button><span class="when">11 Oct 2026</span></li>
-              <li><button type="button" data-milestone="final">Final Assessment</button><span class="when">Future Improvements</span></li>
-              <li><button type="button" data-milestone="viva">Final Presentation and Viva</button><span class="when">20 Oct 2026</span></li>
+              <li class="done"><button type="button" data-milestone="taf">Topic Assessment<span class="when">January 2026</span></button></li>
+              <li class="done"><button type="button" data-milestone="proposal">Project Proposal<span class="when">17 Mar 2026</span></button></li>
+              <li class="done"><button type="button" data-milestone="pp1">Progress Presentation 1<span class="when">12 May 2026</span></button></li>
+              <li class="done"><button type="button" data-milestone="pp2">Progress Presentation 2<span class="when">01 Sep 2026</span></button></li>
+              <li class="done"><button type="button" data-milestone="research-paper">Research Paper<span class="when">04 Sep 2026</span></button></li>
+              <li class="done"><button type="button" data-milestone="draft-thesis">Draft Thesis<span class="when">11 Oct 2026</span></button></li>
+              <li class="done"><button type="button" data-milestone="website">Website<span class="when">11 Oct 2026</span></button></li>
+              <li><button type="button" data-milestone="final">Final Assessment<span class="when">Future Improvements</span></button></li>
+              <li><button type="button" data-milestone="viva">Final Presentation and Viva<span class="when">20 Oct 2026</span></button></li>
             </ol>
           </aside>
         </div>
@@ -254,15 +262,43 @@
   </main>
 
   <footer class="site-footer">
-    <div class="container footer-grid">
-      <div>© 2026 OutfitIQ · R26-IT-052 · Sri Lanka Institute of Information Technology</div>
-      <ul class="footer-links">
-        <li><a href="domain.html">Domain</a></li>
-        <li><a href="milestones.html">Milestones</a></li>
-        <li><a href="documents.html">Documents</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
-      </ul>
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <a class="brand" href="index.html">
+            <span class="brand-mark" aria-hidden="true">iQ</span>
+            <span class="brand-text"><span class="brand-name">Outfit<em>IQ</em></span><span class="brand-id">R26-IT-052 · SLIIT</span></span>
+          </a>
+          <p>A multi-engine intelligent fashion recommendation system with dynamic preference learning and trend awareness.</p>
+          <span class="footer-tag">IT4010 Research Project 2026 · Centre of Excellence for AI</span>
+        </div>
+        <div>
+          <p class="footer-h">Explore</p>
+          <ul class="footer-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="domain.html">Domain</a></li>
+            <li><a href="milestones.html">Milestones</a></li>
+            <li><a href="documents.html">Documents</a></li>
+            <li><a href="presentations.html">Presentations</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="footer-h">Contact</p>
+          <ul class="footer-contact">
+            <li><a href="mailto:outfitiq@gmail.com">outfitiq@gmail.com</a></li>
+            <li>+94 78 297 3353</li>
+            <li>Kaldemulla Moratuwa</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div>© 2026 OutfitIQ · R26-IT-052 · Sri Lanka Institute of Information Technology</div>
+        <a class="to-top" href="#main">Back to top
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6"/></svg>
+        </a>
+      </div>
     </div>
   </footer>
 
